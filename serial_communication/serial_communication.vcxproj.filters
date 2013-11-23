@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Batch_Files">
+      <UniqueIdentifier>{517524e0-cc71-4243-a7a6-19060a05491d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="make_5-28.bat">
+      <Filter>Batch_Files</Filter>
+    </None>
+    <None Include="make_5-30.bat">
+      <Filter>Batch_Files</Filter>
+    </None>
+    <None Include="make_5-32.bat">
+      <Filter>Batch_Files</Filter>
+    </None>
+    <None Include="make_5-34.bat">
+      <Filter>Batch_Files</Filter>
+    </None>
+    <None Include="make_release.bat">
+      <Filter>Batch_Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SerialCom.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="tti_new.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="chiller_new.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCom_helpers.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="chillerDict.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="tti_LinkDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialCom_LinkDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialComDict.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TTiDict.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="chiller_LinkDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TempInterlock.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDeviceController.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CDCLinkDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CDCDict.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="KeithDict.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Keithley_LinkDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Keithley2410.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TempInterlockLinkDef.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TempDict.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SerialCom.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="tti_new.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="chiller_new.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCom_Helpers.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="chillerDict.cxx">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialComDict.cxx">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TTiDict.cxx">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TempInterlock.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonDeviceController.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CDCDict.cxx">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="KeithDict.cxx">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Keithley2410.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TempDict.cxx">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

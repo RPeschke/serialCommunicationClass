@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "serial_communication", "serial_communication\serial_communication.vcxproj", "{04ABF38F-ABDA-4239-A081-BEE184355A70}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testDLL", "testDLL\testDLL.vcxproj", "{F6E85C21-8DE7-4549-B33D-C4600049D33D}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		ROOT 5.28|Win32 = ROOT 5.28|Win32
+		ROOT 5.30|Win32 = ROOT 5.30|Win32
+		ROOT 5.32|Win32 = ROOT 5.32|Win32
+		ROOT 5.34|Win32 = ROOT 5.34|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.Debug|Win32.Build.0 = Debug|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.Release|Win32.ActiveCfg = Release|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.Release|Win32.Build.0 = Release|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.28|Win32.ActiveCfg = ROOT 5.28|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.28|Win32.Build.0 = ROOT 5.28|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.30|Win32.ActiveCfg = ROOT 5.30|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.30|Win32.Build.0 = ROOT 5.30|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.32|Win32.ActiveCfg = ROOT 5.32|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.32|Win32.Build.0 = ROOT 5.32|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.34|Win32.ActiveCfg = ROOT 5.34|Win32
+		{04ABF38F-ABDA-4239-A081-BEE184355A70}.ROOT 5.34|Win32.Build.0 = ROOT 5.34|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.Debug|Win32.Build.0 = Debug|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.Release|Win32.ActiveCfg = Release|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.Release|Win32.Build.0 = Release|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.28|Win32.ActiveCfg = ROOT 5.28|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.28|Win32.Build.0 = ROOT 5.28|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.30|Win32.ActiveCfg = ROOT 5.30|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.30|Win32.Build.0 = ROOT 5.30|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.32|Win32.ActiveCfg = ROOT 5.32|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.32|Win32.Build.0 = ROOT 5.32|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.34|Win32.ActiveCfg = ROOT 5.34|Win32
+		{F6E85C21-8DE7-4549-B33D-C4600049D33D}.ROOT 5.34|Win32.Build.0 = ROOT 5.34|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -75,3 +75,10 @@ packages/
 #Test files
 *.testsettings
 
+*.dll
+*.exp
+*.pdb
+*.exe
+*.tlog
+*.manifest
+*.lastbuildstate
