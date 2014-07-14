@@ -6,12 +6,16 @@
 #include "SCom_helpers.h"
 #include <TTimeStamp.h>
 #ifdef WIN32
-#include "windows.h"
+#include <windows.h>
 #include <winbase.h>
 #else
 #include <fcntl.h>
 #include <termios.h>
 #include <errno.h>
+#endif // WIN32
+
+
+
 #define NOPARITY            0
 #define ODDPARITY           1
 #define EVENPARITY          2
@@ -24,7 +28,7 @@
 #define TWOSTOPBITS         2
 #define Sleep(a) gSystem->Sleep(a)
 
-#endif // WIN32
+
 
 
 using namespace std;
