@@ -75,6 +75,16 @@ tti_CPX400::tti_CPX400( const char * port)
 getID();
 }
 
+tti_CPX400::tti_CPX400( int Port )
+{
+	SComunication =new SerialCom(Port);
+	//	RQSignals=new tti_RQSignals();
+	samplingTime=1000;
+	started1=0;
+	stop1=1;
+	getID();
+}
+
 tti_CPX400::~tti_CPX400(void)
 {
 	

@@ -38,6 +38,7 @@ class DLL_exp tti_CPX400
 	RQ_OBJECT("tti_CPX400")
 public:
 	 tti_CPX400(const char *Port); // Constructor: it needs to know the name of the port. up to now there is only one constructor defined. 
+	 tti_CPX400(int Port); // Constructor: it needs to know the name of the port. up to now there is only one constructor defined. 
 	virtual  ~tti_CPX400(void);  // the Destructor has no special implementation but by default it closes all open files. 
 
 

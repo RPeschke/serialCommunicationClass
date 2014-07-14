@@ -22,6 +22,7 @@ class DLL_exp TempInterlock
 public:
 	TempInterlock(void);
 	TempInterlock(const char *Port);
+	TempInterlock(int Port);
 	~TempInterlock(void);
 
 
@@ -93,6 +94,7 @@ signed long long lastTime_TempReadout;
 
 #ifndef __CINT__
 	SerialCom *s1;
+	void startupCommands();
 #endif
 	ClassDef(TempInterlock, 1);//needed for the ROOT dict
 };

@@ -112,6 +112,28 @@ std::vector<std::string> SComHelper::CutOutSubstring( std::string inputString,co
 	return returnValue;
 }
 
+std::string SComHelper::convertInt2PortString( int port )
+{
+	std::string ret;
+#ifdef WIN32
+
+	if (port<9&&port>=0)
+	{
+		ret="com"+SComHelper::val2string(port);
+	}else if(port>9){
+		ret="\\\\.\\COM"+SComHelper::val2string(port);
+	}else{
+		ret="error";
+	}
+
+#else
+
+	ret="/dev/ttyS"+SComHelper::val2string(port);
+#endif
+
+	return ret;
+}
+
 SComHelper::MutexLock::MutexLock( TMutex *m )
 {
 	_mutex=m;

@@ -36,6 +36,7 @@ public:
 
 	 Chiller_Medingen_C20(void);
 	 Chiller_Medingen_C20(const char *port);
+	 Chiller_Medingen_C20(int port);
 	virtual  ~Chiller_Medingen_C20(void);
 
 
@@ -74,6 +75,7 @@ private:
 
 #ifndef __CINT__
 	SerialCom *SComunication;
+	void startupCommand();
 #endif
 	
 ClassDef(Chiller_Medingen_C20, 1);//needed for the ROOT dict

@@ -16,8 +16,20 @@ TempInterlock::TempInterlock(void)
 TempInterlock::TempInterlock( const char *Port )
 {
 	s1=new SerialCom(Port,115200);
+	startupCommands();
+}
+
+TempInterlock::TempInterlock( int Port )
+{
+	s1=new SerialCom(Port,115200);
+	startupCommands();
+}
+
+
+void TempInterlock::startupCommands()
+{
 	s1->setTerminateCommand("\r");
-	s1->TimeOut_=500; // the interlock is extremely slow therefor one has to wait 500 ms after sending a command before one can receive the answer.
+	s1->timeBetweenSendAndReciev=500; // the interlock is extremely slow therefor one has to wait 500 ms after sending a command before one can receive the answer.
 	s1->SizeOfReadString=200;
 	lastTime_ReadSettings=0;
 	lastTime_TempReadout=0;

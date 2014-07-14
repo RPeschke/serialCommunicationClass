@@ -29,7 +29,7 @@ class DLL_exp SerialCom
 public:
 	 SerialCom(void);
 	 SerialCom(const char* port,int baudRate=9600,int ByteSize=8,int StopBits=0,int Parity=0); 
-
+	 SerialCom(int port,int baudRate=9600,int ByteSize=8,int StopBits=0,int Parity=0); 
 	virtual ~SerialCom(void);
 
 	//Control Functions
@@ -56,6 +56,7 @@ public:
 		_port=port;
 		return 0;
 	}
+	int  set_Port(int port); // no checking if the port exists;
 	int  set_baudRate(int baudRate); // checks if the baudRate value is possible. not jet implemented for linux
 
 	int  set_ByteSize(int byteSize); // checks if the byteSize value is possible. not jet implemented for linux

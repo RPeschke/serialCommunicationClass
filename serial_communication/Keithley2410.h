@@ -34,6 +34,7 @@ class DLL_exp Keithley2410
 	RQ_OBJECT("Keithley2410")
 public:
 	 Keithley2410(const char *Port); // Constructor: it needs to know the name of the port. up to now there is only one constructor defined. 
+	 Keithley2410(int Port);
 	virtual  ~Keithley2410(void);  // the Destructor has no special implementation but by default it closes all open files. 
 
 
@@ -115,7 +116,7 @@ private:
 	int numberOfChannels;
 #ifndef __CINT__
 	SerialCom *SComunication;
-
+	void startupCommands();
 
 #endif
 	

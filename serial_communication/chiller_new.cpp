@@ -47,18 +47,27 @@ void *Worker_Chiller(void *ptr) {
 }
 
 Chiller_Medingen_C20::Chiller_Medingen_C20( const char * port)
-{stop1=1;
-started1=0;
-samplingTime=1000;
+{startupCommand();
 	SComunication=new SerialCom(port);
 }
 
 Chiller_Medingen_C20::Chiller_Medingen_C20( void )
 {
+startupCommand();
+	SComunication=nullptr;
+}
+
+Chiller_Medingen_C20::Chiller_Medingen_C20( int port )
+{
+	startupCommand();
+	SComunication=new SerialCom(port);
+}
+
+void Chiller_Medingen_C20::startupCommand()
+{
 	stop1=1;
 	started1=0;
 	samplingTime=1000;
-	SComunication=nullptr;
 }
 
 double Chiller_Medingen_C20::getStatus( void )

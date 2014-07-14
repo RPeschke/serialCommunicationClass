@@ -8,6 +8,17 @@ using namespace std;
 Keithley2410::Keithley2410( const char *Port )
 {
 	SComunication=new SerialCom(Port);
+	startupCommands();
+}
+
+Keithley2410::Keithley2410( int Port )
+{
+	SComunication=new SerialCom(Port);
+	startupCommands();
+}
+
+void Keithley2410::startupCommands()
+{
 	SComunication->timeBetweenSendAndReciev=5000; // seconds in ms 
 	SComunication->send(":SENS:FUNC:ON 'VOLT:DC'");
 	SComunication->send(":SENS:FUNC:ON 'CURR:DC'");

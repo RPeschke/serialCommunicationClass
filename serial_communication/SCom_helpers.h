@@ -39,6 +39,9 @@ std::vector<double> string2Vector(std::string s);
 
 std::vector<std::string> CutOutSubstring(std::string s,const std::string& startString,const std::string& endString);
 
+std::string convertInt2PortString(int port);
+
+
 
 class MutexLock
 {

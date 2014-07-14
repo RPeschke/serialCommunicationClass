@@ -70,6 +70,25 @@ SerialCom::SerialCom( const char* port,int baudRate,int ByteSize,int StopBits,in
 
 }
 
+SerialCom::SerialCom( int port,int baudRate/*=9600*/,int ByteSize/*=8*/,int StopBits/*=0*/,int Parity/*=0*/ ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(nullptr)
+{
+	SerialMutex=new TMutex();
+	SerialMutex->UnLock();
+
+	terminateCommand = 13;
+	terminateCommand+=10;
+
+	timeBetweenSendAndReciev=0;
+	SizeOfReadString=100;
+
+set_baudRate(baudRate);
+set_ByteSize(ByteSize);
+set_StopBits(StopBits);
+set_Parity(Parity);
+set_Port(port);
+con_stat=connect();
+}
+
 
 SerialCom::~SerialCom(void)
 {
@@ -632,6 +651,22 @@ std::string SerialCom::_read( void )
 	return "error not connected";
 
 
+}
+
+int SerialCom::set_Port( int port ) /* no checking if the port exists */
+{
+	
+_port=SComHelper::convertInt2PortString(port);
+ std::size_t found =_port.find("error");
+ if (found<_port.size())
+ {
+	 addError("error in int SerialCom::set_Port( int port )");
+	 addError("wrong port");
+	 addError(SComHelper::val2string(port));
+	 addError(_port);
+	 addError("----------");
+ }
+	return 0;
 }
 
 

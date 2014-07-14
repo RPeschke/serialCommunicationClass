@@ -291,7 +291,7 @@ int CommonDeviceController::GetTTI( int port )
 
 		if(IsFreeConnection(port)) //verify that port is not used by a chiller
 		{
-			ttiControlObjects.push_back(new tti_CPX400(PortString(port).c_str()));
+			ttiControlObjects.push_back(new tti_CPX400(port));
 			return ttiControlObjects.size()-1;
 		} else {
 			cout<<"port "<<port<<" is already in use by something else (Chiller?)"<<endl;
@@ -356,7 +356,7 @@ void CommonDeviceController::debugdata()
 
 std::string CommonDeviceController::PortString( int port )
 {
-	return "com"+SComHelper::val2string(port);
+	return SComHelper::convertInt2PortString(port);
 }
 
 bool CommonDeviceController::IsFreeConnection(int port, int channel)
