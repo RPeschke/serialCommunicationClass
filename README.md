@@ -66,3 +66,18 @@ int set_Parity(int);
 Setter functions to safely change the value. One can only set the values to supported numbers. If the value is not accepted it will return -1 and the value remains unchanged.
 #2 Description
 This Is a basic serial communication class. It is designed to work with your class in an ROOT envierment. For now you cannot use it directly with CINT so you have to write your own class surounding it. It contains the entirer platform dependencies.
+
+
+#3 How To build the Lib
+
+
+
+```
+cd myFavoritGitDirectory
+git clone https://github.com/RPeschke/serialCommunicationClass.git serialCommunicationClass
+cd serialCommunicationClass/build
+cmake ..
+msbuild SerialCom.sln /p:Configuration=release
+```
+
+after this you can find the lib file in the folder "build\serial_communication\Release\" 
