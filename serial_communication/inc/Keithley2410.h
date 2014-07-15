@@ -156,5 +156,14 @@ ClassDef(Keithley2410, 1);//needed for the ROOT dict
 
 };
 
+#ifdef __CINT__
+
+#pragma link off all globals;
+#pragma link off all classes;
+#pragma link off all functions;
+
+#pragma link C++ class Keithley2410;
+
+#endif
 
 #endif // Keithlay2410_h__

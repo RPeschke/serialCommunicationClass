@@ -1,4 +1,4 @@
-#include "tti_new.h"
+#include "tti_CPX400.h"
 
 #include <iostream>
 #include <string>

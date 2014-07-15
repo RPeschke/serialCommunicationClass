@@ -1,7 +1,7 @@
 #ifndef Chiller_class
 #define Chiller_class
 
-
+ 
 // signal "actualTemp(double)"
 #include <string>
 #include <Rtypes.h>
@@ -81,5 +81,14 @@ private:
 ClassDef(Chiller_Medingen_C20, 1);//needed for the ROOT dict
 };
 
+#ifdef __CINT__
+
+#pragma link off all globals;
+#pragma link off all classes;
+#pragma link off all functions;
+
+#pragma link C++ class Chiller_Medingen_C20;
+
+#endif
 
 #endif //tti_class

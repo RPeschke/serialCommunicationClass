@@ -6,9 +6,9 @@
 #include "Riosfwd.h"
 #include <iosfwd>
 #include <vector>
-#include "tti_new.h"
+#include "tti_CPX400.h"
 #include "SCom_helpers.h"
-#include "chiller_new.h"
+#include "Chiller_Medingen_C20.h"
 
 using namespace std;
 

@@ -202,6 +202,14 @@ ClassDef(tti_CPX400, 1);//needed for the ROOT dict
 
 };
 
+#ifdef __CINT__
 
+#pragma link off all globals;
+#pragma link off all classes;
+#pragma link off all functions;
+
+#pragma link C++ class tti_CPX400;
+
+#endif
 
 #endif //tti_class
