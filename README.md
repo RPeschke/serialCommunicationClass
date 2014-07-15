@@ -5,9 +5,9 @@ a set of classes to communicate with devices like power suplies over Com port
 
 
 #1 Syntax
-----------
-#1.1 Constructor
-----------------
+
+##1.1 Constructor
+
 SerialCom(void);
 SerialCom(const char* port,int baudRate=9600,int ByteSize=8,int StopBits=0,int Parity=0);
 One can create an instant of this class without setting any value, But in the most cases one wants to have a constructor which directly connects to the device. So it is recommended to use the second constructor. It has some reasonable default if you don’t know it exactly try to use them. "Port" must be a port on your computer
