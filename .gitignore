@@ -49,8 +49,7 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.sass-cache
 
-#Project files
-[Bb]uild/
+
 
 #Subversion files
 .svn
