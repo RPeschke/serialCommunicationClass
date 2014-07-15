@@ -2,6 +2,11 @@
 #define SERIALCOM
 
 
+#define SERIAL_COM_ERROR "!!!ERROR!!!" // to avoid collisions with possible return values of new devices the is a bit cryptic.  
+#define SERIAL_COM_ERROR_NOT_CONNECTED "!!!ERROR!!!: Not Connected "
+#define SERIAL_COM_ERROR_BUFFER_IS_EMPTY "!!!ERROR!!!: Buffer is Empty"
+#define SERIAL_COM_ERROR_NO_BYTES_READ "!!!ERROR!!!: no bytes read"
+
 #include <string>
 #include <TThread.h>
 #include <Rtypes.h>
@@ -73,6 +78,11 @@ public:
 		unsigned long TimeOut_;
 		int SizeOfReadString;
 		std::string getPort(){return _port;}
+
+    static bool isErrorValue(std::string& returnString);
+    static bool isErrorValueNotConnected(std::string& returnString);
+    static bool isErrorValueBufferIsEmpty(std::string& returnString);
+    static bool isErrorValueNoBytesRead(std::string& returnString);
 private:
 	
 
@@ -108,6 +118,8 @@ private:
 	ClassDef(SerialCom, 1);//needed for the ROOT dict
 
 };
+
+
 
 #ifdef __CINT__
 

@@ -129,11 +129,11 @@ string Chiller_Medingen_C20::getCommand( std::string input)
 
 	string device_answer=SComunication->query(input);
 	int tries=0;
-	size_t foundError=device_answer.find("error"); // since query returns "error" if something went wrong one has to check for it
-	while(device_answer.size()<1&&foundError!=string::npos&&tries<10) // it occurs that the device doesn't respond correctly even if everything is correct, therefore i want to redo the query 10 times or untile it has worked. 
+	bool foundError=SerialCom::isErrorValue(device_answer); // since query returns "error" if something went wrong one has to check for it
+	while(device_answer.size()<1&&!foundError&&tries<10) // it occurs that the device doesn't respond correctly even if everything is correct, therefore i want to redo the query 10 times or untile it has worked. 
 	{
 		device_answer=SComunication->query(input);
-		foundError=device_answer.find("error"); // since query returns "error" if something went wrong one has to check for it
+		foundError=SerialCom::isErrorValue(device_answer); // since query returns "error" if something went wrong one has to check for it
 		++tries;
 	}
 	return device_answer;

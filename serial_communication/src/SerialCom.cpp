@@ -346,7 +346,7 @@ string SerialCom::query( string input )
 		s2=_read();
 		now.Set();
 	} while (
-		s2.compare("error Buffer is empty")==0
+		isErrorValueBufferIsEmpty(s2)
 		&&
 		(  (now.AsDouble()-start_time)   <   (TimeOut_/1000)  )
 		);
@@ -604,7 +604,7 @@ std::string SerialCom::_read( void )
 			addError("error in SerialCom::_read( void )");
 			addError("----------");
 			delete[] szBuffer;
-			return "error: no bytes read";
+			return SERIAL_COM_ERROR_NO_BYTES_READ;
 		}
 		// end Windows Part
 		//////////////////////////////////////////////////////////////////////////
@@ -629,7 +629,7 @@ std::string SerialCom::_read( void )
 			addError("error in SerialCom::_read( void )");
 			addError("----------");
 			delete[] szBuffer;
-			return "error: no bytes read";
+			return SERIAL_COM_ERROR_NO_BYTES_READ;
 		}
 		// end linux
 		//////////////////////////////////////////////////////////////////////////
@@ -641,8 +641,8 @@ std::string SerialCom::_read( void )
 
 		if (s2.size()<1)
 		{
-			s2="error Buffer is empty";
-			addError("error instd::string SerialCom::_read( void )");
+			s2=SERIAL_COM_ERROR_BUFFER_IS_EMPTY;
+			addError("error in std::string SerialCom::_read( void )");
 			addError("Buffer is Empty");
 			addError("----------");
 		}
@@ -652,7 +652,7 @@ std::string SerialCom::_read( void )
 	addError("not connected");
 	addError("----------");
 	
-	return "error not connected";
+	return SERIAL_COM_ERROR_NOT_CONNECTED;
 
 
 }
@@ -672,5 +672,44 @@ _port=SComHelper::convertInt2PortString(port);
  }
 	return 0;
 }
+
+bool SerialCom::isErrorValue( std::string& returnString )
+{ 
+
+if (returnString.find(SERIAL_COM_ERROR)!=std::string::npos)
+{
+  return true;
+}
+return false;
+}
+
+bool SerialCom::isErrorValueNotConnected( std::string& returnString )
+{
+  if (returnString.compare(SERIAL_COM_ERROR_NOT_CONNECTED)==0)
+  {
+    return true;
+  }
+  return false;
+}
+
+bool SerialCom::isErrorValueBufferIsEmpty( std::string& returnString )
+{
+  if (returnString.compare(SERIAL_COM_ERROR_BUFFER_IS_EMPTY)==0)
+  {
+    return true;
+  }
+  return false;
+}
+
+bool SerialCom::isErrorValueNoBytesRead( std::string& returnString )
+{
+  if (returnString.compare(SERIAL_COM_ERROR_NO_BYTES_READ)==0)
+  {
+    return true;
+  }
+  return false;
+}
+
+
 
 

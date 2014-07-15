@@ -207,11 +207,11 @@ std::string tti_CPX400::getCommand( std::string command1,int channel,std::string
 	  
 	  string device_Answer=SComunication->query(command1); // sends the command to the device. and waits for the answer
 	  int tries=0; 
-	  size_t foundError=device_Answer.find("error"); // since query returns "error" if something went wrong one has to check for it
-	  while(device_Answer.size()<1&&foundError!=string::npos&&tries<10) // it occurs that the device the device doesn't respond correctly even if everything is correct, therefore i want to redo the query 10 times or until it has worked. 
+	  bool foundError=SerialCom::isErrorValue(device_Answer); // since query returns "error" if something went wrong one has to check for it
+	  while(device_Answer.size()<1&&!foundError&&tries<10) // it occurs that the device the device doesn't respond correctly even if everything is correct, therefore i want to redo the query 10 times or until it has worked. 
 	  {
 		  device_Answer=SComunication->query(command1);
-		  foundError=device_Answer.find("error"); // since query returns "error" if something went wrong one has to check for it
+		  foundError=SerialCom::isErrorValue(device_Answer); // since query returns "error" if something went wrong one has to check for it
 		  ++tries;
 	  }
 	return device_Answer;  // eventually it will return the output from the query method this means it is possible to return either the correct value, an empty string or an string which contains some error message
