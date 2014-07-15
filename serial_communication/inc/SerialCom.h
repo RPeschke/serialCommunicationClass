@@ -54,7 +54,7 @@ public:
 
 
 	std::string  read_str(void);
-	TString  read_TString(void);
+	void read_TString(TString& returnValue);
 	// Setter function 
 	// they will return 0 if ok else -1
 	int  set_Port(const char* port) // no checking if the port exists

@@ -521,10 +521,10 @@ void  SerialCom::query_TString(const TString& command,TString &returnString)
 }
 
 
-TString  SerialCom::read_TString( void )
+void SerialCom::read_TString( TString& returnValue )
 {
 
-	return SComHelper::stdString2TString(read_str());
+	returnValue =SComHelper::stdString2TString(read_str());
 }
 
 void SerialCom::setTerminateCommand( std::string term )
