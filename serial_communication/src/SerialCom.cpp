@@ -495,6 +495,15 @@ void DLL_exp SerialCom::show_errors( void )
 	}
 }
 
+void SerialCom::addError( string new_error )
+{
+#ifdef _DEBUG
+	cout<<new_error<<endl;
+#endif
+
+	listOfErrors.push_back(new_error);
+}
+
 void SerialCom::query_cout( std::string command )
 {
 
@@ -505,20 +514,12 @@ void SerialCom::query_cout( std::string command )
 
 }
 
-void SerialCom::addError( string new_error )
+void  SerialCom::query_TString(const TString& command,TString &returnString)
 {
-#ifdef _DEBUG
-	cout<<new_error<<endl;
-#endif
-
-	listOfErrors.push_back(new_error);
+  std::string dummy=command.Data();
+	returnString = SComHelper::stdString2TString(query(dummy));
 }
 
-TString  SerialCom::query_TString( std::string command )
-{
-
-	return SComHelper::stdString2TString(query(command));
-}
 
 TString  SerialCom::read_TString( void )
 {
@@ -709,7 +710,3 @@ bool SerialCom::isErrorValueNoBytesRead( std::string& returnString )
   }
   return false;
 }
-
-
-
-

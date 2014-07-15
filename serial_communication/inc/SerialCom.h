@@ -50,8 +50,9 @@ public:
 	int  send(std::string  command);
 	std::string  query(std::string  command);
 	void  query_cout(std::string  command);
-	TString  query_TString(std::string  command);
-	
+	void query_TString(const TString& command,TString &returnString);
+
+
 	std::string  read_str(void);
 	TString  read_TString(void);
 	// Setter function 
