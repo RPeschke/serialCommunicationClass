@@ -39,7 +39,7 @@ using namespace std;
 
 
 
-SerialCom::SerialCom( void ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(nullptr)// i want to make sure that the values are set but they should be set to the actual value by the setter functions
+SerialCom::SerialCom( void ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(NULL)// i want to make sure that the values are set but they should be set to the actual value by the setter functions
 {
 	SerialMutex=new TMutex();
 	SerialMutex->UnLock();
@@ -59,7 +59,7 @@ SerialCom::SerialCom( void ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5
 	}
 }
 
-SerialCom::SerialCom( const char* port,int baudRate,int ByteSize,int StopBits,int Parity ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(nullptr)
+SerialCom::SerialCom( const char* port,int baudRate,int ByteSize,int StopBits,int Parity ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(NULL)
 {	SerialMutex=new TMutex();
 	SerialMutex->UnLock();
 	
@@ -74,7 +74,7 @@ SerialCom::SerialCom( const char* port,int baudRate,int ByteSize,int StopBits,in
 
 }
 
-SerialCom::SerialCom( int port,int baudRate/*=9600*/,int ByteSize/*=8*/,int StopBits/*=0*/,int Parity/*=0*/ ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(nullptr)
+SerialCom::SerialCom( int port,int baudRate/*=9600*/,int ByteSize/*=8*/,int StopBits/*=0*/,int Parity/*=0*/ ):con_stat(-5),_baudRate(-5),_ByteSize(-5),_Parity(-5),_StopBits(-5),hSerial(NULL)
 {
 	SerialMutex=new TMutex();
 	SerialMutex->UnLock();
