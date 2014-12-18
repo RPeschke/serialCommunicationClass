@@ -18,6 +18,12 @@ include(${PROJECT_SOURCE_DIR}/cmake/Platform.cmake)
 
 
 
+# set the path to which we will install later: default project home, can be changed using
+# cmake -DINSTALL_PREFIX=/some/dir ..
+SET(INSTALL_PREFIX "${PROJECT_SOURCE_DIR}" CACHE PATH "Prefix prepended to install directories")
+SET(CMAKE_INSTALL_PREFIX "${INSTALL_PREFIX}" CACHE INTERNAL "Prefix prepended to install directories" FORCE)
+
+
 
 
 # include directories
