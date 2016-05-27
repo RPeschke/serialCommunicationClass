@@ -13,9 +13,7 @@
 #define max(a,b)            (((a) > (b)) ? (a) : (b))
 #define Sleep(a) gSystem->Sleep(a)
 
-#ifndef nullptr
-nullptr =NULL
-#endif //nullptr
+
 
 #endif
 //#include <Windows.h>
